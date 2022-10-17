@@ -14,10 +14,10 @@ function Question({ question, onAnswered }) {
     }, 1000);
 
     return function cleanup() {
-      clearInterval(timerID);
+      clearTimeout(timerID);
     };
 
-  }, [timeRemaining]);
+  }, [timeRemaining, onAnswered]);
   
   // add useEffect code
 
